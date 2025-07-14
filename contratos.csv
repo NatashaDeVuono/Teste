@@ -1,0 +1,4 @@
+contrato_id,tipo_contrato,data_assinatura,prazo_dias,cláusula_principal,valor_total,status
+1,Prestação,2024-01-15,180,Pagamento em 3 parcelas mensais após entrega.,15000,Ativo
+2,Licenciamento,2023-12-01,365,Multa de 10% em caso de quebra contratual.,80000,Rescindido
+...
