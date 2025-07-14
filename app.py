@@ -47,3 +47,20 @@ st.download_button(
     file_name='relatorio_contratos.csv',
     mime='text/csv'
 )
+import streamlit as st
+import pandas as pd
+
+# Carregar a planilha
+df = pd.read_csv("contratos.csv")
+
+# Mostrar a tabela
+st.dataframe(df)
+
+# Botão para baixar a mesma tabela
+csv = df.to_csv(index=False).encode('utf-8')
+st.download_button(
+    label="📥 Baixar planilha do dashboard",
+    data=csv,
+    file_name='relatorio_contratos.csv',
+    mime='text/csv'
+)
