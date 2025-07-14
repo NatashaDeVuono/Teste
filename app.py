@@ -39,3 +39,11 @@ st.bar_chart(valor_tipo)
 # Tabela
 st.subheader("📄 Visualização Detalhada")
 st.dataframe(df_filtrado)
+# Botão para baixar os dados filtrados como CSV
+csv = df_filtrado.to_csv(index=False).encode('utf-8')
+st.download_button(
+    label="📥 Baixar planilha do dashboard",
+    data=csv,
+    file_name='relatorio_contratos.csv',
+    mime='text/csv'
+)
